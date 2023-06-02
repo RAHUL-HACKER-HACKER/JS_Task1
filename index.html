@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Task 1</title>
+<style type="text/css">
+#div1{
+	
+	padding: 200px;
+}
+</style>
+</head>
+<body>
+<div id="div1">
+<h1>JS Task 1</h1><br>
+<button id="button1" onclick="displayDate()">Show Date</button>
+
+<p id="date">&nbsp;</p>
+<button id="button2" onclick="displayTime()">Show Date</button>
+
+<p id="time">&nbsp;</p>
+
+</div>
+<script type="text/javascript">
+	function displayDate() {
+
+
+  const date = new Date();
+const option1 = {day: 'numeric'};
+const option2 = {month: 'long'};
+const option3 = {year: 'numeric'};
+const formattedDate1 = date.toLocaleDateString('en-US', option1);
+const formattedDate2 = date.toLocaleDateString('en-US', option2);
+const formattedDate3 = date.toLocaleDateString('en-US', option3);
+document.getElementById("date").innerHTML=formattedDate1+"/"+formattedDate2+"/"+formattedDate3;
+
+}
+function displayTime() {
+  
+
+  let time = new Date();
+  document.getElementById("time").innerHTML=time;
+
+
+}
+	
+</script>
+
+
+</body>
+</html>
